@@ -1,9 +1,19 @@
 # Node::Echarts
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/node/echarts`. To experiment with that code, run `bin/console` for an interactive prompt.
+Generate chart image using node-canvas and echarts.
 
-TODO: Delete this and the text above, and describe your gem
+## Requiremnts
 
+Node enviroment
+
+```js
+npm install node-canva echarts --global
+```
+Resolve chinese font 
+```bash
+sudo apt-get install language-pack-gnome-zh-hans
+sudo apt-get install fonts-wqy-microhei
+```
 ## Installation
 
 Add this line to your application's Gemfile:
