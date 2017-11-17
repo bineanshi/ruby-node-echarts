@@ -9,7 +9,7 @@ Node enviroment
 ```js
 npm install node-canva echarts --global
 ```
-Resolve chinese font 
+Resolve chinese font in ubuntu
 ```bash
 sudo apt-get install language-pack-gnome-zh-hans
 sudo apt-get install fonts-wqy-microhei
