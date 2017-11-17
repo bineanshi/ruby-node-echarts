@@ -75,7 +75,7 @@ class Node::EchartsTest < Minitest::Test
   end
 
   def teardown
-    File.delete(@echart_theme_picture_path)
-    File.delete(@echart_picture_path)
+    File.exist?(@echart_theme_picture_path) and File.delete(@echart_theme_picture_path)
+    File.exist?(@echart_picture_path) and File.delete(@echart_picture_path)
   end
 end
