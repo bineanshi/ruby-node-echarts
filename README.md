@@ -38,7 +38,7 @@ Generate cahrt png  with specified path, data and size
 Node::Echarts.chart(path, option, width, height)
 ```
 
-You can also import echarts's theme file
+You can also import echarts's theme file beore invoke chart
 
 ```ruby
 Node::Echarts.register_theme(path)
