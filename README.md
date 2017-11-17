@@ -4,7 +4,7 @@ Generate chart image using node-canvas and echarts.
 
 ## Requiremnts
 
-Node enviroment
+Node enviroment and packages
 
 ```js
 npm install node-canva echarts --global
