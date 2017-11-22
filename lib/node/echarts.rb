@@ -17,9 +17,9 @@ module Node
     #    data: (hash)
     #    width: integer
     #    height: integer
-    def                        self.chart(path, data, width=400, height=400)
-      cmd_str = "var echarts = require('echarts'); var Canvas = require('canvas'); var fs = require('fs'); #{@theme}; echarts.setCanvasCreator(function () { var canvas = new Canvas(128, 128); return canvas; }); var chart = echarts.init(new Canvas(#{width}, #{height}), 'infographic'); chart.setOption(#{data.to_json.gsub("\"", "'")}); fs.writeFileSync('#{path}', chart.getDom().toBuffer()); process.exit()"
-      `node -e "#{cmd_str}"`
+    def self.chart(path, data, width=400, height=400)
+      cmd_str = "var echarts = require('echarts'); var Canvas = require('canvas'); var fs = require('fs'); #{@theme}; echarts.setCanvasCreator(function () { var canvas = new Canvas(#{width}, #{height}); return canvas; }); var chart = echarts.init(new Canvas(#{width}, #{height}), 'infographic'); chart.setOption(#{data.to_json.gsub("\"", "'")}); fs.writeFileSync('#{path}', chart.getDom().toBuffer()); process.exit()"
+      `export export NODE_PATH=$(npm config get prefix)/lib/node_modules; node -e "#{cmd_str}"`
     end
 
     # Register echarts theme by file
